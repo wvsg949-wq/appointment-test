@@ -4,6 +4,6 @@
 // Project Settings -> API Keys
 
 window.SUPABASE_CONFIG = {
-  url: "PASTE_YOUR_SUPABASE_PROJECT_URL_HERE",
-  anonKey: "PASTE_YOUR_SUPABASE_ANON_KEY_HERE"
+  url: "https://xefctxjpeklqvssbqrxe.supabase.co",
+  anonKey: "sb_publishable_yez7BXUjiu9mh13MIfzhMw_IkDDP78S"
 };
