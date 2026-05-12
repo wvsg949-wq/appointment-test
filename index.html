@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book Appointment</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="page">
+    <header class="hero">
+      <div>
+        <p class="badge">Appointment Request</p>
+        <h1>Book Your Appointment</h1>
+        <p>Enter your name and mobile number. Our team will call you soon.</p>
+      </div>
+
+      <a href="admin.html" class="link-button">Admin Panel</a>
+    </header>
+
+    <section class="card">
+      <form id="appointmentForm">
+        <input class="hidden-field" id="website" type="text" autocomplete="off" />
+
+        <label for="name">Full Name</label>
+        <input id="name" type="text" placeholder="Enter your name" required />
+
+        <label for="mobile">Mobile Number</label>
+        <input id="mobile" type="tel" placeholder="Enter your mobile number" required />
+
+        <button id="submitBtn" type="submit">Submit Request</button>
+      </form>
+
+      <div id="message"></div>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
