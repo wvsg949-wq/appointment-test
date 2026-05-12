@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Panel</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="page">
+    <header class="hero">
+      <div>
+        <p class="badge">Admin Panel</p>
+        <h1>Appointment Requests</h1>
+        <p>Login to view and manage customer requests.</p>
+      </div>
+
+      <a href="index.html" class="link-button secondary">Website</a>
+    </header>
+
+    <section id="loginBox" class="card">
+      <h2>Admin Login</h2>
+
+      <form id="loginForm">
+        <label for="email">Email</label>
+        <input id="email" type="email" placeholder="admin@example.com" required />
+
+        <label for="password">Password</label>
+        <input id="password" type="password" placeholder="Enter password" required />
+
+        <button id="loginBtn" type="submit">Login</button>
+      </form>
+
+      <div id="loginMessage"></div>
+    </section>
+
+    <section id="dashboard" class="card hidden">
+      <div class="dashboard-top">
+        <h2>Requests</h2>
+        <div class="actions">
+          <button id="refreshBtn" class="secondary">Refresh</button>
+          <button id="logoutBtn" class="danger">Logout</button>
+        </div>
+      </div>
+
+      <div class="stats">
+        <div><strong id="totalCount">0</strong><span>Total</span></div>
+        <div><strong id="newCount">0</strong><span>New</span></div>
+        <div><strong id="confirmedCount">0</strong><span>Confirmed</span></div>
+      </div>
+
+      <input id="searchInput" type="search" placeholder="Search by name, mobile, or status" />
+
+      <div id="adminMessage"></div>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Mobile</th>
+              <th>Date</th>
+              <th>Status</th>
+              <th>Notes</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="requestsTable"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
