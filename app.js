@@ -92,10 +92,10 @@ if (appointmentForm) {
     submitBtn.textContent = "Submit Request";
 
     if (error) {
-      console.error(error);
-      showMessage("message", "Something went wrong. Please try again.", "error");
-      return;
-    }
+  console.error(error);
+  showMessage("message", error.message, "error");
+  return;
+}
 
     appointmentForm.reset();
     showMessage(
